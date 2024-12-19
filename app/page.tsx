@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sword, Book, Shield } from 'lucide-react';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
@@ -10,7 +11,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-3">
             <img 
-              src="/Images/AOG98.jpg"
+              src="/images/AOG98.jpg"
               alt="Armor of God Logo"
               className="h-12 w-12 object-cover"
             />
@@ -33,7 +34,7 @@ export default function Home() {
       <div className="w-full max-w-7xl mx-auto">
         <div className="relative">
           <img 
-            src="/Images/AOGB.jpg"
+            src="/images/AOGB.jpg"
             alt="The Armor of God Banner"
             className="w-full h-auto"
           />
@@ -55,23 +56,25 @@ export default function Home() {
           </div>
 
           <div className="group hover:transform hover:-translate-y-2 transition-all duration-300">
-  <Link href="/sword">
-    <div className="bg-gradient-to-br from-[#1a1a1a] to-black p-8 rounded-lg border border-[#785b10] hover:border-[#c69d2f] transition-colors">
-      <div className="flex flex-col items-center">
-        <img 
-          src="/Images/doug-pic.jpg"
-          alt="Doug Coe"
-          className="w-24 h-24 rounded-full object-cover mb-6"
-        />
-        <Sword className="h-12 w-12 text-[#c69d2f] mb-6 group-hover:text-[#e7bd4c] transition-colors" />
-      </div>
-      <h2 className="text-2xl font-bold text-white mb-3">The Work of God is to Believe</h2>
-      <p className="text-gray-400 leading-relaxed">
-        Take the sword of the Spirit, which is the word of God.
-      </p>
-    </div>
-  </Link>
-</div>
+            <Link href="/sword">
+              <div className="bg-gradient-to-br from-[#1a1a1a] to-black p-8 rounded-lg border border-[#785b10] hover:border-[#c69d2f] transition-colors">
+                <div className="flex flex-col items-center">
+                  <Image 
+                    src="/images/doug-pic.jpg"
+                    alt="Doug Coe"
+                    width={96}
+                    height={96}
+                    className="rounded-full object-cover mb-6"
+                  />
+                  <Sword className="h-12 w-12 text-[#c69d2f] mb-6 group-hover:text-[#e7bd4c] transition-colors" />
+                </div>
+                <h2 className="text-2xl font-bold text-white mb-3">The Work of God is to Believe</h2>
+                <p className="text-gray-400 leading-relaxed">
+                  Take the sword of the Spirit, which is the word of God.
+                </p>
+              </div>
+            </Link>
+          </div>
 
           <div className="group hover:transform hover:-translate-y-2 transition-all duration-300">
             <div className="bg-gradient-to-br from-[#1a1a1a] to-black p-8 rounded-lg border border-[#785b10] hover:border-[#c69d2f] transition-colors">
@@ -112,7 +115,7 @@ export default function Home() {
               {/* Description Image */}
               <div className="md:w-1/2 p-8">
                 <img 
-                  src="/Images/AOG-decription.jpg"
+                  src="/images/AOG-decription.jpg"
                   alt="Armor of God Description"
                   className="w-full h-auto rounded-lg shadow-2xl"
                 />
